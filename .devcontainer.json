@@ -1,0 +1,26 @@
+{
+    "image": "debian:bookworm-slim",
+    "features": {
+        "ghcr.io/devcontainers/features/nix:1": {
+            "packages": [
+                "direnv"
+            ]
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "jnoortheen.nix-ide"
+            ],
+            "settings": {
+                "chat.agent.enabled": false,
+                "editor.wordWrap": "on",
+                "git.autofetch": true,
+                "git.confirmSync": false,
+                "workbench.secondarySideBar.defaultVisibility": "hidden"
+            }
+        }
+    },
+    // see: https://code.visualstudio.com/docs/sourcecontrol/faq#_why-is-vs-code-warning-me-that-the-git-repository-is-potentially-unsafe (because of nix)
+    "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+}
