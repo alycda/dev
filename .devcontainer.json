@@ -10,17 +10,21 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "jnoortheen.nix-ide"
+                "jnoortheen.nix-ide",
+                "skellock.just"
             ],
             "settings": {
                 "chat.agent.enabled": false,
                 "editor.wordWrap": "on",
                 "git.autofetch": true,
                 "git.confirmSync": false,
+                // "nix.enableLanguageServer": true, Command nil not found in $PATH (because it's installed later by direnv)
+                // "nix.serverPath": "rnix-lsp",
                 "workbench.secondarySideBar.defaultVisibility": "hidden"
             }
         }
     },
+    "postCreateCommand": "echo 'eval \"$(direnv hook bash)\"' >> ~/.bashrc && direnv allow",
     // see: https://code.visualstudio.com/docs/sourcecontrol/faq#_why-is-vs-code-warning-me-that-the-git-repository-is-potentially-unsafe (because of nix)
     "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
 }
