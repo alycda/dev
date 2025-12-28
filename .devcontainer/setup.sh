@@ -17,7 +17,7 @@ nix-channel --update
 nix-shell '<home-manager>' -A install
 
 # Apply the configuration from this repo
-home-manager switch -f "${SCRIPT_DIR}/home.nix"
+home-manager switch -b backup -f "${SCRIPT_DIR}/home.nix"
 
 # Allow direnv for this template repo (if it has .envrc)
 if [ -f "${WORKSPACE_DIR}/.envrc" ]; then

@@ -5,3 +5,6 @@ rebuild:
     home-manager switch -b backup -f .devcontainer/home.nix
 
 export USER := shell("whoami")
+
+cheats:
+    cheat -l
