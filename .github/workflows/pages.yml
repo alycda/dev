@@ -20,9 +20,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      mdBook:
-        - run: cargo install mdbook
-        - run: mdbook build && mv book _site
+      - name: "mdbook"
+        run: | 
+          cargo install mdbook
+          mdbook build && mv book _site
       
       # OPTIONAL: Replace the above with one of these for your project:
       #
