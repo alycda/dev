@@ -16,8 +16,10 @@
     "customizations": {
         "vscode": {
             "extensions": [
+                "alefragnani.bookmarks",
                 "anthropic.claude-code",
                 "jnoortheen.nix-ide",
+                "mk12.better-git-line-blame",
                 "skellock.just",
                 "visualjj.visualjj"
             ],
@@ -28,7 +30,10 @@
                 "git.confirmSync": false,
                 // "nix.enableLanguageServer": true, Command nil not found in $PATH (because it's installed later by direnv)
                 // "nix.serverPath": "rnix-lsp",
-                "workbench.secondarySideBar.defaultVisibility": "hidden"
+                "sourceControl.providers": [
+                    "jujutsu"   // keep only the Jujutsu provider
+                ],
+                "workbench.secondarySideBar.defaultVisibility": "hidden",
             }
         }
     },
