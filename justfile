@@ -24,3 +24,12 @@ export-presentation:
 [working-directory: 'book']
 book:
     mdbook serve --open
+
+[working-directory: 'book']
+build-book:
+    mdbook build
+
+[working-directory: 'book']
+build-book-gha:
+    just build-book
+    mv book ../_site
