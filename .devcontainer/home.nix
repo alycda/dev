@@ -29,10 +29,6 @@
     '';
   };
 
-  # xdg.configFile."cheat/conf.yml".text = ''
-  #   # ... cheat config ...
-  # '';
-
   # Set globally
   home.sessionVariables = {
     EDITOR = "hx";

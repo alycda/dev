@@ -25,6 +25,5 @@
         }
     },
     "postCreateCommand": "bash ${containerWorkspaceFolder}/.devcontainer/setup.sh",
-    // see: https://code.visualstudio.com/docs/sourcecontrol/faq#_why-is-vs-code-warning-me-that-the-git-repository-is-potentially-unsafe (because of nix)
-    "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && jj config set --user user.name \"$(git config --get user.name)\" && jj config set --user user.email \"$(git config --get user.email)\" "
+    "postStartCommand": "bash ${containerWorkspaceFolder}/.devcontainer/poststart.sh"
 }
