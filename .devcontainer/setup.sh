@@ -1,5 +1,22 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
+
+# Install locales only if they aren't already present
+if ! dpkg -s locales >/dev/null 2>&1; then
+  apt-get update
+  apt-get install -y --no-install-recommends locales
+fi
+
+# Enable and generate en_US.UTF-8 (idempotent)
+if ! grep -q '^en_US.UTF-8 UTF-8' /etc/locale.gen; then
+  echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
+fi
+locale-gen en_US.UTF-8
+update-locale LANG=en_US.UTF-8
+
+# Export for the current shell (helps the script itself)
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Set USER if not already set (common in containers)
 export USER=${USER:-root}
