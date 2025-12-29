@@ -12,7 +12,8 @@ cheats:
 present:
     presenterm slides.md
 
-# re-run with CMD+SHIFT+P > Tasks: Run Task > Present with Speaker Notes
-# present-with-speaker-notes:
-#     presenterm --publish-speaker-notes slides.md
-#     presenterm --listen-speaker-notes slides.md
+present-with-speaker-notes:
+    tmux kill-session -t present 2>/dev/null || true
+    tmux new-session -d -s present 'presenterm --listen-speaker-notes slides.md' \; \
+        split-window -h 'presenterm --publish-speaker-notes slides.md' \; \
+        attach -t present
