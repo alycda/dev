@@ -20,26 +20,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Presenterm slides (default for this template)
-      # Replace this section with your project's documentation build
-      - name: Install presenterm
-        run: cargo install presenterm
-      - name: Export slides to HTML
-        run: |
-          mkdir -p _site
-          presenterm --export-html slides.md -o _site/index.html
-
-      # TODO: Replace the above with one of these for your project:
+      mdBook:
+        - run: cargo install mdbook
+        - run: mdbook build && mv book _site
+      
+      # OPTIONAL: Replace the above with one of these for your project:
       #
       # Rust docs:
       #   - run: cargo doc --no-deps
       #   - run: mv target/doc _site
-      #
-      # mdBook:
-      #   - run: cargo install mdbook
-      #   - run: mdbook build && mv book _site
-      #
-      # Other static generators as needed
+      #        
 
       - uses: actions/upload-pages-artifact@v3
 

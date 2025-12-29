@@ -20,3 +20,7 @@ present-with-speaker-notes:
 
 export-presentation:
     presenterm --export-html slides.md --output out/slides.html
+
+[working-directory: 'book']
+book:
+    mdbook serve --open
