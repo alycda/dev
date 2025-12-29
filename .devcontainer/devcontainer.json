@@ -18,6 +18,7 @@
             "extensions": [
                 "alefragnani.bookmarks",
                 "anthropic.claude-code",
+                "jjk.jjk",
                 "jnoortheen.nix-ide",
                 "mk12.better-git-line-blame",
                 "skellock.just",

@@ -6,3 +6,5 @@ git config --global --add safe.directory $(dirname "$PWD")
 
 jj config set --user user.name "$(git config --get user.name)" 
 jj config set --user user.email "$(git config --get user.email)"
+jj config set --user ui.pager :builtin
+jj config set --user ui.editor "hx"

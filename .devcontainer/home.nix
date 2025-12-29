@@ -39,6 +39,14 @@
     '';
   };
 
+  # don't use, unsets the USER from poststart.sh
+  # programs.jujutsu = {
+  #   enable = true;
+  #   settings = {
+  #     ui.editor = "hx";
+  #   };
+  # };
+
   # Set globally
   home.sessionVariables = {
     EDITOR = "hx";
