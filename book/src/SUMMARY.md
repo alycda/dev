@@ -5,3 +5,5 @@
 - [Nix](./nix/README.md)
     - [Home Manager](./nix/home-manager.md)
     - [Flakes]()
+- [Tools](./tools/README.md)
+    - [Just](./tools/just.md)

@@ -109,7 +109,7 @@ A Node.js project needs `nodejs` in its `shell.nix`. But you want `helix` and `r
 
 ## Up Next: Just
 
-You've seen `just rebuild` above. The next chapter covers Just—a command runner that ties these tools together with simple, memorable commands.
+You've seen `just rebuild` above. The [next chapter](./tools/just.md) covers Just—a command runner that ties these tools together with simple, memorable commands.
 
 ---
 
