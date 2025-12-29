@@ -64,7 +64,7 @@ Notice that we install Nix immediately. The devcontainer itself stays minimal be
 - Tools are managed declaratively in Nix
 - You can use the same Nix configuration outside Docker
 
-We'll cover Nix in detail in a later chapter.
+We'll cover Nix in detail in the next [chapter](./chapter_3.md).
 
 ## When to Use Devcontainers
 
