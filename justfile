@@ -8,3 +8,6 @@ export USER := shell("whoami")
 
 cheats:
     cheat -l
+
+present:
+    presenterm slides.md
