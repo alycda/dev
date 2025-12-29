@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     helix
     ripgrep
+    jujutsu
   ];
 
   # direnv with nix-direnv for fast flake loading
