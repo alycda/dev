@@ -17,3 +17,6 @@ present-with-speaker-notes:
     tmux new-session -d -s present 'presenterm --listen-speaker-notes slides.md' \; \
         split-window -h 'presenterm --publish-speaker-notes slides.md' \; \
         attach -t present
+
+export-presentation:
+    presenterm --export-html slides.md --output out/slides.html
