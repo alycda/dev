@@ -1,8 +1,16 @@
 {
     "image": "debian:bookworm-slim",
+    "mounts": [
+        "source=claude-auth,target=/root/.claude,type=volume"
+    ],
     "features": {
         "ghcr.io/devcontainers/features/nix:1": {
             "packages": []  // home-manager handles packages
+        }
+    },
+    "secrets": {
+        "ANTHROPIC_API_KEY": {
+            "description": "Claude session key from Claude Console (for Claude Code CLI)"
         }
     },
     "customizations": {

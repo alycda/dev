@@ -1,5 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 {
+  # Allow unfree packages (needed for claude-code)
+  nixpkgs.config.allowUnfree = true;
+
   # Let home-manager manage itself
   programs.home-manager.enable = true;
 
@@ -8,7 +11,14 @@
     helix
     ripgrep
     jujutsu
+    gh
+    claude-code
   ];
+
+  # preserve claude authentication and history (possibly redundant with devcontainer volume mount)
+  home.activation.preserveClaude = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    mkdir -p $HOME/.claude
+  '';
 
   # direnv with nix-direnv for fast flake loading
   programs.direnv = {
