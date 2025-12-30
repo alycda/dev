@@ -72,7 +72,7 @@ The devcontainer installs Nix, but Nix manages the actual tools. This separation
 The template's `shell.nix` has grown to include several tools:
 
 ```nix
-buildInputs = with pkgs; [ just cheat asciinema presenterm tmux mdbook ];
+buildInputs = with pkgs; [ just cheat asciinema_3 presenterm tmux mdbook ];
 ```
 
 Each of these gets its own chapter later. The point is: adding tools is trivial. One line in `shell.nix`, and everyone who clones this repo gets the same environment.

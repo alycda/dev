@@ -4,3 +4,4 @@
 - [Devcontainers](./chapter_2.md)
 - [Nix](./nix/README.md)
     - [Home Manager](./nix/home-manager.md)
+    - [Flakes]()
