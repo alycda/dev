@@ -1,4 +1,4 @@
-# Devcontainer
+# Devcontainers
 
 Devcontainers often get a bad reputation—and sometimes deservedly so. Running Docker for a simple webpage feels like swatting a fly with a sledgehammer, especially when the container is bloated and slow.
 
@@ -19,7 +19,7 @@ A devcontainer solves this by declaring exactly what your environment should con
 
 ## Starting Minimal
 
-This template's initial devcontainer ([cc11da7](https://github.com/alyssa-e/dev/commit/cc11da7273691c76e44d6317dc5547561d078024)) was intentionally sparse:
+This template's initial devcontainer ([cc11da7](https://github.com/alycda/dev/commit/cc11da7273691c76e44d6317dc5547561d078024)) was intentionally sparse:
 
 ```json
 {
@@ -82,5 +82,6 @@ The goal isn't Docker for Docker's sake—it's having a single source of truth f
 
 ---
 
+- https://learnxinyminutes.com/docker/
 - https://containers.dev/
 - https://code.visualstudio.com/docs/devcontainers/containers
