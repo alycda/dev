@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     helix
     ripgrep
+    git
     jujutsu
     gh
     claude-code
