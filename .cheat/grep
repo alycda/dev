@@ -1,2 +1,39 @@
-rg
+---
+tags: [ search, ripgrep ]
+syntax: bash
+---
+# Use rg (ripgrep) instead of grep. It respects .gitignore and is
+# recursive by default, so `rg pattern` is usually the whole command.
 
+# Search every tracked file under the current directory
+rg extern_c
+
+# Case-insensitive, and whole-word only
+rg -i extern_c
+rg -w add
+
+# Restrict to a language (rg --type-list shows all of them)
+rg -t rust '#\[no_mangle\]'
+rg -t c 'int32_t'
+
+# Search files ripgrep would normally skip (.gitignore'd, hidden)
+rg --no-ignore --hidden ripgrep
+
+# Show context around each hit
+rg -C 3 repr\(C\)
+
+# Just the filenames, no matching lines
+rg -l panic
+
+# Find where a symbol is defined vs. where it is called
+rg 'fn solve'      # definition
+rg '\bsolve\('     # call sites
+
+# Literal string, no regex escaping needed
+rg -F 'unsafe { *ptr }'
+
+# Replace in the output only (a preview — rg never writes to files)
+rg 'libaoc' -r 'libffi_playground'
+
+# Feed the file list to something else
+rg -l --null todo | xargs -0 $EDITOR
