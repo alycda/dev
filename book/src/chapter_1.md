@@ -4,7 +4,7 @@ Git needs no introduction—it's the ubiquitous version control system you alrea
 
 ## The Initial Commit
 
-This repository started with a single commit ([821861c](https://github.com/alyssa-e/dev/commit/821861c9bc14679aa12fd1b7c8833219ce0a1616)) containing only a `.gitignore`:
+This repository started with a single commit ([821861c](https://github.com/alycda/dev/commit/821861c9bc14679aa12fd1b7c8833219ce0a1616)) containing only a `.gitignore`:
 
 ```gitignore
 # Ignore build outputs from performing a nix-build or `nix build` command
@@ -52,5 +52,6 @@ The specific patterns vary; the principle doesn't. Start clean, stay clean.
 
 ---
 
+- https://learnxinyminutes.com/git/
 - https://git-scm.com/docs/gitignore
 - https://www.kernel.org/pub/software/scm/git/docs/gitignore.html
